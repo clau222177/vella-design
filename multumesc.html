@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesaj Trimis — Vella Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .thankyou {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+        }
+
+        .thankyou-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 64px 48px;
+            max-width: 480px;
+            width: 100%;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .thankyou-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 28px;
+            background: rgba(78, 205, 196, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thankyou-icon svg {
+            color: var(--accent-secondary);
+        }
+
+        .thankyou-title {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .thankyou-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .thankyou .btn {
+            display: inline-flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="thankyou">
+        <div class="thankyou-card">
+            <div class="thankyou-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <path d="M8 18l8 8 12-16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h1 class="thankyou-title">Mesaj trimis!</h1>
+            <p class="thankyou-text">
+                Mulțumesc pentru mesaj. Te contactez în maximum 24 de ore cu o ofertă personalizată.
+            </p>
+            <a href="index.html" class="btn btn-primary">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Înapoi acasă</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
