@@ -476,201 +476,7 @@ Felicitari!`,
 
 
 
-    <style>
-        .lang-switcher { display: flex; gap: 4px; background: rgba(255,255,255,0.08); padding: 4px; border-radius: 100px; margin-left: 16px; }
-        .lang-btn { background: transparent; border: none; color: #a0a0b0; padding: 6px 10px; border-radius: 100px; cursor: pointer; font-size: 12px; font-weight: 600; transition: all 0.2s; }
-        .lang-btn.active { background: linear-gradient(135deg, #6C63FF, #4ECDC4); color: white; }
-        .lang-btn:hover { color: white; }
-        @media (max-width: 768px) { .lang-switcher { margin-left: auto; margin-right: 12px; } }
-        .star.active { color: #FFD700; }
-        .star:hover { transform: scale(1.2); }
-        .text-gradient { background: linear-gradient(135deg, #6C63FF, #4ECDC4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    </style>
-    <script>
-        const translations = {
-            ro: {
-                nav_home: "Acasă", nav_services: "Servicii", nav_about: "Despre", nav_contact: "Contact",
-                badge_available: "Disponibili pentru proiecte noi",
-                hero_title1: 'Construim branduri<br>care <span class="text-gradient">atrag</span>',
-                hero_sub: "Transformăm viziunea ta într-o identitate vizuală puternică și memorabilă. Design premium care face diferența pe piață.",
-                btn_pay: "Plătește Acum cu Stripe",
-                btn_services: "Vezi serviciile",
-                stat_brands: "Branduri create", stat_clients: "Clienți mulțumiți", stat_exp: "Ani experiență",
-                services_tag: "Servicii",
-                services_title: 'Soluții complete de <span class="text-gradient">branding</span>',
-                services_desc: "Oferim pachete adaptate nevoilor tale, de la identitate vizuală completă la materiale promoționale.",
-                pack_complete: "Pachet Completes",
-                pack_complete_desc: "Identitate vizuală completă, logo, paletă de culori, tipografie, manual de brand, cărți de vizită, layout social media și multe altele.",
-                pack_starter: "Pachet Starter",
-                pack_starter_desc: "Perfect pentru afaceri la început de drum. Obține un logo profesionist și elementele esențiale pentru a-ți lansa brandul.",
-                pack_extra: "Servicii Extra",
-                pack_extra_desc: "Servicii individuale precum redesign de logo, ilustrații personalizate, design pentru ambalaje sau materiale promoționale.",
-                about_tag: "<span data-i18n="about_tag">Despre noi</span>",
-                about_title: "Design care vorbește pentru tine",
-                about_p1: "Vella Design este un studio de design grafic cu pasiune pentru crearea de branduri unice și memorabile. Credem că fiecare afacere merită o identitate vizuală puternică care inspiră încredere și atrage clienți.",
-                about_p2: "Fiecare proiect îl tratăm cu atenție la detalii, ascultând cu grijă viziunea clientului și transformând-o în realitate vizuală. De la concept la livrare, suntem alături de tine.",
-                step_listen: "Ascultăm", step_listen_desc: "Înțelegem brandul tău și audiența ta.",
-                step_create: "Creăm", step_create_desc: "Concepte originale care ies în evidență.",
-                step_deliver: "Livrăm", step_deliver_desc: "Fișiere gata de utilizat, la timp.",
-                contact_title: "Hai să colaborăm",
-                contact_desc: "Spune-ne despre proiectul tău și te contactăm în maxim 24 de ore cu o ofertă personalizată.",
-                appreciate_title: 'Ți-a plăcut <span class="text-gradient">Vella Design</span>?',
-                appreciate_sub: "Dacă ți-a plăcut site-ul, lasă o apreciere! Ne ajută enorm să creștem.",
-                appreciate_btn: "Lasă o apreciere ❤️",
-                appreciate_thanks: "Mulțumesc mult! Aprecierea ta contează enorm! 🙏✨",
-                appreciate_count: "Apreciat de",
-                appreciate_visitors: "de vizitatori"
-            },
-            en: {
-                nav_home: "Home", nav_services: "Services", nav_about: "About", nav_contact: "Contact",
-                badge_available: "Available for new projects",
-                hero_title1: 'We build brands<br>that <span class="text-gradient">stand out</span>',
-                hero_sub: "We transform your vision into a powerful and memorable visual identity. Premium design that makes a difference in the market.",
-                btn_pay: "Pay Now with Stripe",
-                btn_services: "See services",
-                stat_brands: "Brands created", stat_clients: "Happy clients", stat_exp: "Years experience",
-                services_tag: "Services",
-                services_title: 'Complete <span class="text-gradient">branding</span> solutions',
-                services_desc: "We offer packages tailored to your needs, from complete visual identity to promotional materials.",
-                pack_complete: "Complete Package",
-                pack_complete_desc: "Full visual identity, logo, color palette, typography, brand manual, business cards, social media layout and more.",
-                pack_starter: "Starter Package",
-                pack_starter_desc: "Perfect for businesses at the beginning. Get a professional logo and essential elements to launch your brand.",
-                pack_extra: "Extra Services",
-                pack_extra_desc: "Individual services such as logo redesign, custom illustrations, packaging design or promotional materials.",
-                about_tag: "About us",
-                about_title: "Design that speaks for you",
-                about_p1: "Vella Design is a graphic design studio with a passion for creating unique and memorable brands. We believe every business deserves a strong visual identity that inspires trust and attracts clients.",
-                about_p2: "We treat each project with attention to detail, carefully listening to the client's vision and transforming it into visual reality. From concept to delivery, we are by your side.",
-                step_listen: "We Listen", step_listen_desc: "We understand your brand and your audience.",
-                step_create: "We Create", step_create_desc: "Original concepts that stand out.",
-                step_deliver: "We Deliver", step_deliver_desc: "Ready-to-use files, on time.",
-                contact_title: "Let's collaborate",
-                contact_desc: "Tell us about your project and we'll contact you within 24 hours with a personalized offer.",
-                appreciate_title: 'Did you like <span class="text-gradient">Vella Design</span>?',
-                appreciate_sub: "If you liked the site, leave an appreciation! It helps us grow enormously.",
-                appreciate_btn: "Leave an appreciation ❤️",
-                appreciate_thanks: "Thank you so much! Your appreciation means a lot! 🙏✨",
-                appreciate_count: "Appreciated by",
-                appreciate_visitors: "visitors"
-            },
-            fr: {
-                nav_home: "Accueil", nav_services: "Services", nav_about: "À propos", nav_contact: "Contact",
-                badge_available: "Disponible pour nouveaux projets",
-                hero_title1: 'Nous créons des marques<br>qui <span class="text-gradient">attirent</span>',
-                hero_sub: "Nous transformons votre vision en une identité visuelle puissante et mémorable. Un design premium qui fait la différence sur le marché.",
-                btn_pay: "Payer avec Stripe",
-                btn_services: "Voir les services",
-                stat_brands: "Marques créées", stat_clients: "Clients satisfaits", stat_exp: "Ans d'expérience",
-                services_tag: "Services",
-                services_title: 'Solutions complètes de <span class="text-gradient">branding</span>',
-                services_desc: "Nous proposons des forfaits adaptés à vos besoins, de l'identité visuelle complète au matériel promotionnel.",
-                pack_complete: "Pack Complet",
-                pack_complete_desc: "Identité visuelle complète, logo, palette de couleurs, typographie, manuel de marque, cartes de visite, mise en page réseaux sociaux et plus encore.",
-                pack_starter: "Pack Starter",
-                pack_starter_desc: "Parfait pour les entreprises en démarrage. Obtenez un logo professionnel et les éléments essentiels pour lancer votre marque.",
-                pack_extra: "Services Extra",
-                pack_extra_desc: "Services individuels tels que refonte de logo, illustrations personnalisées, design d'emballage ou matériel promotionnel.",
-                about_tag: "À propos de nous",
-                about_title: "Un design qui parle pour vous",
-                about_p1: "Vella Design est un studio de design graphique passionné par la création de marques uniques et mémorables. Nous croyons que chaque entreprise mérite une identité visuelle forte qui inspire confiance et attire les clients.",
-                about_p2: "Nous traitons chaque projet avec attention aux détails, en écoutant attentivement la vision du client et en la transformant en réalité visuelle. Du concept à la livraison, nous sommes à vos côtés.",
-                step_listen: "Nous Écoutons", step_listen_desc: "Nous comprenons votre marque et votre audience.",
-                step_create: "Nous Créons", step_create_desc: "Des concepts originaux qui se démarquent.",
-                step_deliver: "Nous Livrons", step_deliver_desc: "Fichiers prêts à l'emploi, à temps.",
-                contact_title: "Collaborons",
-                contact_desc: "Parlez-nous de votre projet et nous vous contacterons dans les 24 heures avec une offre personnalisée.",
-                appreciate_title: 'Vous avez aimé <span class="text-gradient">Vella Design</span>?',
-                appreciate_sub: "Si vous avez aimé le site, laissez une appréciation! Cela nous aide énormément à grandir.",
-                appreciate_btn: "Laisser une appréciation ❤️",
-                appreciate_thanks: "Merci beaucoup! Votre appréciation compte énormément! 🙏✨",
-                appreciate_count: "Apprécié par",
-                appreciate_visitors: "visiteurs"
-            },
-            de: {
-                nav_home: "Startseite", nav_services: "Leistungen", nav_about: "Über uns", nav_contact: "Kontakt",
-                badge_available: "Verfügbar für neue Projekte",
-                hero_title1: 'Wir bauen Marken<br>die <span class="text-gradient">begeistern</span>',
-                hero_sub: "Wir verwandeln Ihre Vision in eine starke und unvergessliche visuelle Identität. Premium-Design, das auf dem Markt den Unterschied macht.",
-                btn_pay: "Jetzt mit Stripe bezahlen",
-                btn_services: "Leistungen ansehen",
-                stat_brands: "Marken erstellt", stat_clients: "Zufriedene Kunden", stat_exp: "Jahre Erfahrung",
-                services_tag: "Leistungen",
-                services_title: 'Komplette <span class="text-gradient">Branding</span>-Lösungen',
-                services_desc: "Wir bieten Pakete, die auf Ihre Bedürfnisse zugeschnitten sind, von der kompletten visuellen Identität bis hin zu Werbematerialien.",
-                pack_complete: "Komplett-Paket",
-                pack_complete_desc: "Komplette visuelle Identität, Logo, Farbpalette, Typografie, Markenhandbuch, Visitenkarten, Social-Media-Layout und vieles mehr.",
-                pack_starter: "Starter-Paket",
-                pack_starter_desc: "Perfekt für Unternehmen am Anfang. Erhalten Sie ein professionelles Logo und die wesentlichen Elemente, um Ihre Marke zu starten.",
-                pack_extra: "Extra-Leistungen",
-                pack_extra_desc: "Einzelleistungen wie Logo-Redesign, benutzerdefinierte Illustrationen, Verpackungsdesign oder Werbematerialien.",
-                about_tag: "Über uns",
-                about_title: "Design, das für Sie spricht",
-                about_p1: "Vella Design ist ein Grafikdesign-Studio mit einer Leidenschaft für die Schaffung einzigartiger und unvergesslicher Marken. Wir glauben, dass jedes Unternehmen eine starke visuelle Identität verdient, die Vertrauen schafft und Kunden anzieht.",
-                about_p2: "Wir behandeln jedes Projekt mit Liebe zum Detail, hören sorgfältig auf die Vision des Kunden und verwandeln sie in visuelle Realität. Vom Konzept bis zur Lieferung sind wir an Ihrer Seite.",
-                step_listen: "Wir Hören zu", step_listen_desc: "Wir verstehen Ihre Marke und Ihr Publikum.",
-                step_create: "Wir Kreieren", step_create_desc: "Originelle Konzepte, die hervorstechen.",
-                step_deliver: "Wir Liefern", step_deliver_desc: "Gebrauchsfertige Dateien, pünktlich.",
-                contact_title: "Lass uns zusammenarbeiten",
-                contact_desc: "Erzählen Sie uns von Ihrem Projekt und wir kontaktieren Sie innerhalb von 24 Stunden mit einem personalisierten Angebot.",
-                appreciate_title: 'Hat Ihnen <span class="text-gradient">Vella Design</span> gefallen?',
-                appreciate_sub: "Wenn Ihnen die Seite gefallen hat, hinterlassen Sie eine Wertschätzung! Es hilft uns enorm zu wachsen.",
-                appreciate_btn: "Wertschätzung hinterlassen ❤️",
-                appreciate_thanks: "Vielen Dank! Ihre Wertschätzung bedeutet uns sehr viel! 🙏✨",
-                appreciate_count: "Geschätzt von",
-                appreciate_visitors: "Besuchern"
-            }
-        };
-
-        function setLanguage(lang) {
-            localStorage.setItem('vella_lang', lang);
-            document.documentElement.lang = lang;
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if(translations[lang] && translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
-            });
-            // Update active button
-            document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-            // Update appreciation messages if already shown
-            const thanksEl = document.getElementById('msgApreciere');
-            if(thanksEl && thanksEl.style.display !== 'none') {
-                thanksEl.textContent = translations[lang].appreciate_thanks;
-            }
-        }
-
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-        });
-
-        // Load saved language or default ro
-        const savedLang = localStorage.getItem('vella_lang') || 'ro';
-        setLanguage(savedLang);
-
-        // Also handle other elements without data-i18n for simplicity (services cards titles)
-        // We update via observer - extended translation for cards
-        function updateExtraTranslations(lang) {
-            const t = translations[lang];
-            // Service names - find by position
-            const serviceNames = document.querySelectorAll('.service-name');
-            if(serviceNames[0]) serviceNames[0].textContent = t.pack_complete;
-            if(serviceNames[1]) serviceNames[1].textContent = t.pack_starter;
-            if(serviceNames[2]) serviceNames[2].textContent = t.pack_extra;
-            
-            const serviceDescs = document.querySelectorAll('.service-desc');
-            if(serviceDescs[0]) serviceDescs[0].textContent = t.pack_complete_desc;
-            if(serviceDescs[1]) serviceDescs[1].textContent = t.pack_starter_desc;
-            if(serviceDescs[2]) serviceDescs[2].textContent = t.pack_extra_desc;
-        }
-        // Hook into setLanguage
-        const originalSetLang = setLanguage;
-        window.setLanguage = function(lang) {
-            originalSetLang(lang);
-            updateExtraTranslations(lang);
-        };
-        updateExtraTranslations(savedLang);
-    </script>
+    
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -689,5 +495,133 @@ Felicitari!`,
     </footer>
 
     <script src="script.js"></script>
+
+    <style>
+        .lang-switcher { display: flex; gap: 4px; background: rgba(255,255,255,0.08); padding: 4px; border-radius: 100px; margin-left: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .lang-btn { background: transparent; border: none; color: #a0a0b0; padding: 6px 12px; border-radius: 100px; cursor: pointer; font-size: 12px; font-weight: 700; transition: all 0.2s; }
+        .lang-btn.active { background: linear-gradient(135deg, #6C63FF, #4ECDC4); color: white; }
+        .lang-btn:hover { color: white; background: rgba(255,255,255,0.1); }
+        .lang-btn.active:hover { background: linear-gradient(135deg, #6C63FF, #4ECDC4); }
+        @media (max-width: 900px) { .lang-switcher { margin-left: auto; margin-right: 10px; } }
+    </style>
+    <script>
+    // ===== VELLA DESIGN - 4 LIMBI SYSTEM =====
+    (function() {
+        const translations = {
+            ro: {
+                nav_home: "Acasă", nav_services: "Servicii", nav_about: "Despre", nav_contact: "Contact",
+                badge_available: "Disponibili pentru proiecte noi",
+                hero_title: 'Construim branduri<br>care <span class="text-gradient">atrag</span>',
+                hero_sub: "Transformăm viziunea ta într-o identitate vizuală puternică și memorabilă. Design premium care face diferența pe piață.",
+                btn_pay: "Plătește Acum cu Stripe",
+                btn_services: "Vezi serviciile",
+                stat_brands: "Branduri create", stat_clients: "Clienți mulțumiți", stat_exp: "Ani experiență",
+                services_tag: "Servicii", services_title: 'Soluții complete de <span class="text-gradient">branding</span>',
+                services_desc: "Oferim pachete adaptate nevoilor tale, de la identitate vizuală completă la materiale promoționale."
+            },
+            en: {
+                nav_home: "Home", nav_services: "Services", nav_about: "About", nav_contact: "Contact",
+                badge_available: "Available for new projects",
+                hero_title: 'We build brands<br>that <span class="text-gradient">stand out</span>',
+                hero_sub: "We transform your vision into a powerful and memorable visual identity. Premium design that makes a difference.",
+                btn_pay: "Pay Now with Stripe",
+                btn_services: "View services",
+                stat_brands: "Brands created", stat_clients: "Happy clients", stat_exp: "Years experience",
+                services_tag: "Services", services_title: 'Complete <span class="text-gradient">branding</span> solutions',
+                services_desc: "Packages tailored to your needs, from full visual identity to promo materials."
+            },
+            fr: {
+                nav_home: "Accueil", nav_services: "Services", nav_about: "À propos", nav_contact: "Contact",
+                badge_available: "Disponible pour nouveaux projets",
+                hero_title: 'Nous créons des marques<br>qui <span class="text-gradient">attirent</span>',
+                hero_sub: "Nous transformons votre vision en une identité visuelle puissante et mémorable. Design premium qui fait la différence.",
+                btn_pay: "Payer avec Stripe",
+                btn_services: "Voir les services",
+                stat_brands: "Marques créées", stat_clients: "Clients satisfaits", stat_exp: "Ans d'expérience",
+                services_tag: "Services", services_title: 'Solutions complètes de <span class="text-gradient">branding</span>',
+                services_desc: "Des forfaits adaptés à vos besoins, de l'identité visuelle complète au matériel promo."
+            },
+            de: {
+                nav_home: "Startseite", nav_services: "Leistungen", nav_about: "Über uns", nav_contact: "Kontakt",
+                badge_available: "Verfügbar für neue Projekte",
+                hero_title: 'Wir bauen Marken<br>die <span class="text-gradient">begeistern</span>',
+                hero_sub: "Wir verwandeln Ihre Vision in eine starke und unvergessliche visuelle Identität. Premium-Design, das den Unterschied macht.",
+                btn_pay: "Jetzt mit Stripe bezahlen",
+                btn_services: "Leistungen ansehen",
+                stat_brands: "Marken erstellt", stat_clients: "Zufriedene Kunden", stat_exp: "Jahre Erfahrung",
+                services_tag: "Leistungen", services_title: 'Komplette <span class="text-gradient">Branding</span>-Lösungen',
+                services_desc: "Pakete für Ihre Bedürfnisse, von kompletter visueller Identität bis Werbematerial."
+            }
+        };
+
+        function applyLang(lang) {
+            localStorage.setItem('vella_lang', lang);
+            document.documentElement.lang = lang;
+            const t = translations[lang];
+            if(!t) return;
+
+            // Nav
+            document.querySelectorAll('[data-i18n="nav_home"]').forEach(el => el.textContent = t.nav_home);
+            document.querySelectorAll('[data-i18n="nav_services"]').forEach(el => el.textContent = t.nav_services);
+            document.querySelectorAll('[data-i18n="nav_about"]').forEach(el => el.textContent = t.nav_about);
+            document.querySelectorAll('[data-i18n="nav_contact"]').forEach(el => el.textContent = t.nav_contact);
+
+            // Hero
+            const badge = document.querySelector('[data-i18n="badge_available"]');
+            if(badge) badge.textContent = t.badge_available;
+            const heroTitle = document.querySelector('[data-i18n="hero_title1"]');
+            if(heroTitle) heroTitle.innerHTML = t.hero_title;
+            const heroSub = document.querySelector('[data-i18n="hero_sub"]');
+            if(heroSub) heroSub.textContent = t.hero_sub;
+            const btnPay = document.querySelector('[data-i18n="btn_pay"]');
+            if(btnPay) btnPay.textContent = t.btn_pay;
+            const btnServ = document.querySelector('[data-i18n="btn_services"]');
+            if(btnServ) btnServ.textContent = t.btn_services;
+            const statBrands = document.querySelectorAll('[data-i18n="stat_brands"]');
+            statBrands.forEach(el => el.textContent = t.stat_brands);
+            document.querySelectorAll('[data-i18n="stat_clients"]').forEach(el => el.textContent = t.stat_clients);
+            document.querySelectorAll('[data-i18n="stat_exp"]').forEach(el => el.textContent = t.stat_exp);
+
+            // Services header
+            document.querySelectorAll('[data-i18n="services_tag"]').forEach(el => el.textContent = t.services_tag);
+            document.querySelectorAll('[data-i18n="services_title"]').forEach(el => el.innerHTML = t.services_title);
+            document.querySelectorAll('[data-i18n="services_desc"]').forEach(el => el.textContent = t.services_desc);
+
+            // Buttons active
+            document.querySelectorAll('.lang-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.lang === lang);
+            });
+            console.log('Language switched to', lang);
+        }
+
+        // Attach click listeners with delegation + direct
+        document.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('vella_lang') || 'ro';
+            applyLang(saved);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const lang = this.dataset.lang;
+                    applyLang(lang);
+                });
+            });
+        });
+
+        // Also attach immediately in case DOM already loaded
+        setTimeout(() => {
+            const saved = localStorage.getItem('vella_lang') || 'ro';
+            applyLang(saved);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.onclick = function(e) {
+                    e.preventDefault();
+                    applyLang(this.dataset.lang);
+                };
+            });
+        }, 100);
+
+        window.VellaSetLang = applyLang;
+    })();
+    </script>
+
 </body>
 </html>
