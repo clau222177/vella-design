@@ -365,6 +365,89 @@
         </div>
     </section>
 
+
+    <!-- APRECIERE SECTION -->
+    <section id="apreciere" class="apreciere-section" style="padding: 80px 0; background: linear-gradient(180deg, #0a0a0f 0%, #141420 100%); text-align: center;">
+        <div class="container">
+            <div class="reveal" style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 40px 30px; backdrop-filter: blur(10px);">
+                <div style="font-size: 48px; margin-bottom: 16px;">💜</div>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: white; margin-bottom: 12px;">Ți-a plăcut <span class="text-gradient">Vella Design</span>?</h2>
+                <p style="color: #a0a0b0; font-size: 16px; margin-bottom: 24px;">Dacă ți-a plăcut site-ul, lasă o apreciere! Ne ajută enorm să creștem.</p>
+                
+                <div id="stars" style="display: flex; justify-content: center; gap: 8px; margin-bottom: 24px; font-size: 36px; cursor: pointer;">
+                    <span class="star" data-value="1">☆</span>
+                    <span class="star" data-value="2">☆</span>
+                    <span class="star" data-value="3">☆</span>
+                    <span class="star" data-value="4">☆</span>
+                    <span class="star" data-value="5">☆</span>
+                </div>
+
+                <button id="btnApreciere" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 16px; padding: 16px;">
+                    <span>Lasă o apreciere ❤️</span>
+                </button>
+
+                <p id="msgApreciere" style="display:none; margin-top: 20px; color: #4ECDC4; font-weight: 600; font-size: 18px;">Mulțumesc mult! Aprecierea ta contează enorm! 🙏✨</p>
+                <p style="margin-top: 16px; font-size: 13px; color: #666;">Apreciat de <span id="countAprecieri">127</span> de vizitatori</p>
+            </div>
+        </div>
+    </section>
+    <style>
+        .star.active { color: #FFD700; }
+        .star:hover { transform: scale(1.2); }
+        .text-gradient { background: linear-gradient(135deg, #6C63FF, #4ECDC4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    </style>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        let rating = 0;
+        stars.forEach(s => {
+            s.addEventListener('click', () => {
+                rating = parseInt(s.dataset.value);
+                stars.forEach(st => {
+                    if(parseInt(st.dataset.value) <= rating) {
+                        st.textContent = '★';
+                        st.classList.add('active');
+                    } else {
+                        st.textContent = '☆';
+                        st.classList.remove('active');
+                    }
+                });
+            });
+            s.addEventListener('mouseenter', () => {
+                const val = parseInt(s.dataset.value);
+                stars.forEach(st => {
+                    st.textContent = parseInt(st.dataset.value) <= val ? '★' : '☆';
+                });
+            });
+        });
+        document.getElementById('stars').addEventListener('mouseleave', () => {
+            stars.forEach(st => {
+                st.textContent = parseInt(st.dataset.value) <= rating ? '★' : '☆';
+            });
+        });
+        document.getElementById('btnApreciere').addEventListener('click', () => {
+            if(rating === 0) {
+                alert('Alege mai intai cate stele vrei sa dai! ⭐');
+                return;
+            }
+            document.getElementById('msgApreciere').style.display = 'block';
+            document.getElementById('btnApreciere').innerHTML = '<span>Mulțumesc! ✅</span>';
+            document.getElementById('btnApreciere').disabled = true;
+            let count = parseInt(document.getElementById('countAprecieri').textContent);
+            document.getElementById('countAprecieri').textContent = count + 1;
+            // confetti effect
+            stars.forEach((st,i) => {
+                setTimeout(() => { st.style.transform = 'scale(1.5)'; setTimeout(()=>st.style.transform='scale(1)',200)}, i*100);
+            });
+            // Salveaza in localStorage
+            localStorage.setItem('vella_apreciat', 'true');
+        });
+        if(localStorage.getItem('vella_apreciat')) {
+            document.getElementById('msgApreciere').style.display = 'block';
+            document.getElementById('msgApreciere').textContent = 'Ai apreciat deja! Mulțumesc din nou! 💜';
+        }
+    </script>
+
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
