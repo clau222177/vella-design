@@ -220,27 +220,27 @@
                             <div class="about-card-icon">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z" fill="#6C63FF" opacity="0.8"/></svg>
                             </div>
-                            <span>Creativitate</span>
+                            <span><span data-i18n="about_creat">Creativitate</span></span>
                         </div>
                         <div class="about-card about-card-2">
                             <div class="about-card-icon">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="8" stroke="#4ECDC4" stroke-width="2"/><path d="M16 12v4l3 3" stroke="#4ECDC4" stroke-width="2" stroke-linecap="round"/></svg>
                             </div>
-                            <span>Punctualitate</span>
+                            <span><span data-i18n="about_punct">Punctualitate</span></span>
                         </div>
                         <div class="about-card about-card-3">
                             <div class="about-card-icon">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 16l5 5L24 10" stroke="#FF6B6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </div>
-                            <span>Calitate</span>
+                            <span><span data-i18n="about_qual">Calitate</span></span>
                         </div>
                     </div>
                 </div>
                 <div class="about-content">
                     <span class="section-tag reveal"><span data-i18n="about_tag">Despre noi</span></span>
-                    <h2 class="section-title reveal">Design care <span class="text-gradient">vorbește</span> pentru tine</h2>
+                    <h2 class="section-title" data-i18n="about_title">Design care <span class="text-gradient">vorbește</span><br>pentru tine</h2>
                     <p class="about-text reveal">
-                        Vella Design este un studio de design grafic cu pasiune pentru crearea de branduri unice și memorabile. Credem că fiecare afacere merită o identitate vizuală puternică care inspiră încredere și atrage clienți.
+                        <span data-i18n="about_p1">Vella Design este un studio de design grafic cu pasiune pentru crearea de branduri unice și memorabile. Credem că fiecare afacere merită o identitate vizuală puternică care inspiră încredere și atrage clienți.
                     </p>
                     <p class="about-text reveal">
                         Fiecare proiect îl tratăm cu atenție la detalii, ascultând cu grijă viziunea clientului și transformând-o în realitate vizuală. De la concept la livrare, suntem alături de tine.
@@ -289,22 +289,22 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Nume complet</label>
-                            <input type="text" id="name" name="name" placeholder="Ion Popescu" required>
+                            <input type="text" id="name" name="name" data-ph="ph_name" placeholder="Ion Popescu" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="ion@exemplu.ro" required>
+                            <label for="email" data-i18n="info_email">Email</label>
+                            <input type="email" id="email" name="email" data-ph="ph_email" placeholder="ion@exemplu.ro" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Telefon</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+40 7XX XXX XXX">
+                            <input type="tel" id="phone" name="phone" data-ph="ph_phone" placeholder="+40 7XX XXX XXX">
                         </div>
                         <div class="form-group">
                             <label for="budget">Buget estimativ</label>
                             <select id="budget" name="budget">
-                                <option value="" disabled selected>Selectează</option>
+                                <option value="" disabled selected data-i18n="ph_budget">Selectează</option>
                                 <option value="150">150$ — Pachet Starter</option>
                                 <option value="300">300$ — Pachet Completes</option>
                                 <option value="custom">Custom — Proiect special</option>
@@ -313,10 +313,10 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Mesajul tău</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Descrie proiectul tău: ce fel de brand ai, cui te adresezi, ce te inspiră..." required></textarea>
+                        <textarea id="message" name="message" rows="5" data-ph="ph_msg" placeholder="Descrie proiectul tău: ce fel de brand ai, cui te adresezi, ce te inspiră..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit">
-                        <span class="btn-text">Trimite mesajul</span>
+                        <span class="btn-text" data-i18n="btn_send">Trimite mesajul</span>
                         <span class="btn-loading">
                             <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="40" stroke-dashoffset="10"><animateTransform attributeName="transform" type="rotate" dur="0.8s" from="0 10 10" to="360 10 10" repeatCount="indefinite"/></circle></svg>
                         </span>
@@ -332,7 +332,7 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
                         <div>
-                            <h4>Email</h4>
+                            <h4 data-i18n="info_email">Email</h4>
                             <a href="mailto:claudiu.vella7@gmail.com">claudiu.vella7@gmail.com</a>
                         </div>
                     </div>
@@ -341,8 +341,8 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
                         <div>
-                            <h4>Locație</h4>
-                            <p>Palermo, Italia</p>
+                            <h4 data-i18n="info_loc">Locație</h4>
+                            <p data-i18n="info_loc_val">Palermo, Italia</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -350,8 +350,8 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                         </div>
                         <div>
-                            <h4>Program</h4>
-                            <p>Luni — Vineri, 09:00 — 18:00</p>
+                            <h4 data-i18n="info_prog">Program</h4>
+                            <p data-i18n="info_prog_val">Luni — Vineri, 09:00 — 18:00</p>
                         </div>
                     </div>
                     <div class="social-links">
@@ -620,6 +620,174 @@ Felicitari!`,
         }, 100);
 
         window.VellaSetLang = applyLang;
+    })();
+    </script>
+
+
+    <script>
+    (function(){
+        const fullT = {
+            ro: {
+                about_badge: "<span data-i18n="about_badge">DESPRE NOI</span>",
+                about_title: 'Design care <span class="text-gradient">vorbește</span><br>pentru tine',
+                about_p1: "<span data-i18n="about_p1">Vella Design este un studio de design grafic cu pasiune pentru crearea de branduri unice și memorabile. Credem că fiecare afacere merită o identitate vizuală puternică care inspiră încredere și atrage clienți.",
+                about_p2: "Fiecare proiect îl tratăm cu atenție la detalii, ascultând cu grijă viziunea clientului și transformând-o în realitate vizuală. De la concept la livrare, suntem alături de tine.",
+                about_creat: "Creativitate", about_punct: "Punctualitate", about_qual: "Calitate",
+                step1_title: "Ascultăm", step1_desc: "Înțelegem brandul tău și audiența ta.",
+                step2_title: "Creăm", step2_desc: "Concepte originale care ies în evidență.",
+                step3_title: "Livrăm", step3_desc: "Fișiere gata de utilizat, la timp.",
+                contact_badge: "Hai să <span class='text-gradient'>colaborăm</span>",
+                contact_sub: "Spune-ne despre proiectul tău și te contactăm în maxim 24 de ore cu o ofertă personalizată.",
+                label_name: "<span data-i18n="label_name">NUME COMPLET</span>", ph_name: "Ion Popescu",
+                label_email: "EMAIL", ph_email: "ion@exemplu.ro",
+                label_phone: "TELEFON", ph_phone: "+40 7XX XXX XXX",
+                label_budget: "BUGET ESTIMATIV", ph_budget: "Selectează",
+                label_msg: "MESAJUL TĂU", ph_msg: "Descrie proiectul tău: ce fel de brand ai, cui te adresezi, ce te inspiră...",
+                btn_send: "Trimite mesajul",
+                info_email: "Email", info_loc: "Locație", info_loc_val: "Palermo, Italia", info_prog: "Program", info_prog_val: "Luni — Vineri, 09:00 — 18:00",
+                appreciate_title: 'Ți-a plăcut <span class="text-gradient">Vella Design</span>?',
+                appreciate_sub: "Dacă ți-a plăcut site-ul, lasă o apreciere! Ne ajută enorm să creștem.",
+                appreciate_btn: "Lasă o apreciere ❤️",
+                appreciate_thanks: "Mulțumesc mult! Aprecierea ta contează enorm! 🙏✨",
+                appreciate_by: "Apreciat de", appreciate_vis: "de vizitatori",
+                footer_copy: "© 2026 Vella Design. Toate drepturile rezervate."
+            },
+            en: {
+                about_badge: "ABOUT US",
+                about_title: 'Design that <span class="text-gradient">speaks</span><br>for you',
+                about_p1: "Vella Design is a graphic design studio passionate about creating unique and memorable brands. We believe every business deserves a strong visual identity that inspires trust and attracts clients.",
+                about_p2: "We treat each project with attention to detail, listening carefully to the client's vision and turning it into visual reality. From concept to delivery, we're by your side.",
+                about_creat: "Creativity", about_punct: "Punctuality", about_qual: "Quality",
+                step1_title: "We Listen", step1_desc: "We understand your brand and audience.",
+                step2_title: "We Create", step2_desc: "Original concepts that stand out.",
+                step3_title: "We Deliver", step3_desc: "Ready-to-use files, on time.",
+                contact_badge: "Let's <span class='text-gradient'>collaborate</span>",
+                contact_sub: "Tell us about your project and we'll contact you within 24 hours with a personalized offer.",
+                label_name: "FULL NAME", ph_name: "John Doe",
+                label_email: "EMAIL", ph_email: "john@example.com",
+                label_phone: "PHONE", ph_phone: "+1 XXX XXX XXX",
+                label_budget: "ESTIMATED BUDGET", ph_budget: "Select",
+                label_msg: "YOUR MESSAGE", ph_msg: "Describe your project: what kind of brand you have, who is your audience, what inspires you...",
+                btn_send: "Send message",
+                info_email: "Email", info_loc: "Location", info_loc_val: "Palermo, Italy", info_prog: "Schedule", info_prog_val: "Mon — Fri, 09:00 — 18:00",
+                appreciate_title: 'Did you like <span class="text-gradient">Vella Design</span>?',
+                appreciate_sub: "If you liked the site, leave an appreciation! It helps us grow.",
+                appreciate_btn: "Leave an appreciation ❤️",
+                appreciate_thanks: "Thank you so much! Your appreciation means a lot! 🙏✨",
+                appreciate_by: "Appreciated by", appreciate_vis: "visitors",
+                footer_copy: "© 2026 Vella Design. All rights reserved."
+            },
+            fr: {
+                about_badge: "À PROPOS",
+                about_title: 'Un design qui <span class="text-gradient">parle</span><br>pour vous',
+                about_p1: "Vella Design est un studio de design graphique passionné par la création de marques uniques et mémorables. Nous croyons que chaque entreprise mérite une identité visuelle forte qui inspire confiance et attire les clients.",
+                about_p2: "Nous traitons chaque projet avec attention aux détails, en écoutant attentivement la vision du client et en la transformant en réalité visuelle. Du concept à la livraison, nous sommes à vos côtés.",
+                about_creat: "Créativité", about_punct: "Ponctualité", about_qual: "Qualité",
+                step1_title: "Nous Écoutons", step1_desc: "Nous comprenons votre marque et votre audience.",
+                step2_title: "Nous Créons", step2_desc: "Des concepts originaux qui se démarquent.",
+                step3_title: "Nous Livrons", step3_desc: "Fichiers prêts à l'emploi, à temps.",
+                contact_badge: "Collaborons <span class='text-gradient'>ensemble</span>",
+                contact_sub: "Parlez-nous de votre projet et nous vous contacterons dans les 24 heures avec une offre personnalisée.",
+                label_name: "NOM COMPLET", ph_name: "Jean Dupont",
+                label_email: "EMAIL", ph_email: "jean@exemple.fr",
+                label_phone: "TÉLÉPHONE", ph_phone: "+33 X XX XX XX XX",
+                label_budget: "BUDGET ESTIMÉ", ph_budget: "Sélectionner",
+                label_msg: "VOTRE MESSAGE", ph_msg: "Décrivez votre projet: quel type de marque, à qui vous vous adressez, ce qui vous inspire...",
+                btn_send: "Envoyer le message",
+                info_email: "Email", info_loc: "Emplacement", info_loc_val: "Palerme, Italie", info_prog: "Horaires", info_prog_val: "Lun — Ven, 09:00 — 18:00",
+                appreciate_title: 'Vous avez aimé <span class="text-gradient">Vella Design</span>?',
+                appreciate_sub: "Si vous avez aimé le site, laissez une appréciation!",
+                appreciate_btn: "Laisser une appréciation ❤️",
+                appreciate_thanks: "Merci beaucoup! Votre appréciation compte énormément! 🙏✨",
+                appreciate_by: "Apprécié par", appreciate_vis: "visiteurs",
+                footer_copy: "© 2026 Vella Design. Tous droits réservés."
+            },
+            de: {
+                about_badge: "ÜBER UNS",
+                about_title: 'Design, das <span class="text-gradient">spricht</span><br>für Sie',
+                about_p1: "Vella Design ist ein Grafikdesign-Studio mit Leidenschaft für die Schaffung einzigartiger und unvergesslicher Marken. Wir glauben, dass jedes Unternehmen eine starke visuelle Identität verdient, die Vertrauen schafft und Kunden anzieht.",
+                about_p2: "Wir behandeln jedes Projekt mit Liebe zum Detail, hören sorgfältig auf die Vision des Kunden und verwandeln sie in visuelle Realität. Vom Konzept bis zur Lieferung sind wir an Ihrer Seite.",
+                about_creat: "Kreativität", about_punct: "Pünktlichkeit", about_qual: "Qualität",
+                step1_title: "Wir Hören zu", step1_desc: "Wir verstehen Ihre Marke und Ihr Publikum.",
+                step2_title: "Wir Kreieren", step2_desc: "Originelle Konzepte, die hervorstechen.",
+                step3_title: "Wir Liefern", step3_desc: "Gebrauchsfertige Dateien, pünktlich.",
+                contact_badge: "Lass uns <span class='text-gradient'>zusammenarbeiten</span>",
+                contact_sub: "Erzählen Sie uns von Ihrem Projekt und wir kontaktieren Sie innerhalb von 24 Stunden mit einem Angebot.",
+                label_name: "VOLLSTÄNDIGER NAME", ph_name: "Max Mustermann",
+                label_email: "EMAIL", ph_email: "max@beispiel.de",
+                label_phone: "TELEFON", ph_phone: "+49 XXX XXXXXXX",
+                label_budget: "GESCHÄTZTES BUDGET", ph_budget: "Auswählen",
+                label_msg: "IHRE NACHRICHT", ph_msg: "Beschreiben Sie Ihr Projekt: Was für eine Marke, Zielgruppe, Inspiration...",
+                btn_send: "Nachricht senden",
+                info_email: "Email", info_loc: "Standort", info_loc_val: "Palermo, Italien", info_prog: "Zeiten", info_prog_val: "Mo — Fr, 09:00 — 18:00",
+                appreciate_title: 'Hat Ihnen <span class="text-gradient">Vella Design</span> gefallen?',
+                appreciate_sub: "Wenn Ihnen die Seite gefallen hat, hinterlassen Sie eine Wertschätzung!",
+                appreciate_btn: "Wertschätzung hinterlassen ❤️",
+                appreciate_thanks: "Vielen Dank! Ihre Wertschätzung bedeutet uns sehr viel! 🙏✨",
+                appreciate_by: "Geschätzt von", appreciate_vis: "Besuchern",
+                footer_copy: "© 2026 Vella Design. Alle Rechte vorbehalten."
+            }
+        };
+
+        function applyFullLang(lang){
+            const t = fullT[lang];
+            if(!t) return;
+            const setText = (sel, val) => { document.querySelectorAll(sel).forEach(el=> el.innerHTML = val); };
+            const setAttr = (sel, attr, val) => { document.querySelectorAll(sel).forEach(el=> el.setAttribute(attr, val)); };
+
+            setText('[data-i18n="about_badge"]', t.about_badge);
+            setText('[data-i18n="about_title"]', t.about_title);
+            setText('[data-i18n="about_p1"]', t.about_p1);
+            setText('[data-i18n="about_p2"]', t.about_p2);
+            setText('[data-i18n="about_creat"]', t.about_creat);
+            setText('[data-i18n="about_punct"]', t.about_punct);
+            setText('[data-i18n="about_qual"]', t.about_qual);
+            setText('[data-i18n="step1_title"]', t.step1_title);
+            setText('[data-i18n="step1_desc"]', t.step1_desc);
+            setText('[data-i18n="step2_title"]', t.step2_title);
+            setText('[data-i18n="step2_desc"]', t.step2_desc);
+            setText('[data-i18n="step3_title"]', t.step3_title);
+            setText('[data-i18n="step3_desc"]', t.step3_desc);
+            setText('[data-i18n="contact_badge"]', t.contact_badge);
+            setText('[data-i18n="contact_sub"]', t.contact_sub);
+            setText('[data-i18n="label_name"]', t.label_name);
+            setText('[data-i18n="label_email"]', t.label_email);
+            setText('[data-i18n="label_phone"]', t.label_phone);
+            setText('[data-i18n="label_budget"]', t.label_budget);
+            setText('[data-i18n="label_msg"]', t.label_msg);
+            setText('[data-i18n="btn_send"]', t.btn_send);
+            setText('[data-i18n="info_email"]', t.info_email);
+            setText('[data-i18n="info_loc"]', t.info_loc);
+            setText('[data-i18n="info_loc_val"]', t.info_loc_val);
+            setText('[data-i18n="info_prog"]', t.info_prog);
+            setText('[data-i18n="info_prog_val"]', t.info_prog_val);
+            setText('[data-i18n="appreciate_title"]', t.appreciate_title);
+            setText('[data-i18n="appreciate_sub"]', t.appreciate_sub);
+            setText('[data-i18n="appreciate_btn"]', t.appreciate_btn);
+            setText('[data-i18n="appreciate_by"]', t.appreciate_by);
+            setText('[data-i18n="appreciate_vis"]', t.appreciate_vis);
+            setText('[data-i18n="footer_copy"]', t.footer_copy);
+
+            setAttr('[data-ph="ph_name"]', 'placeholder', t.ph_name);
+            setAttr('[data-ph="ph_email"]', 'placeholder', t.ph_email);
+            setAttr('[data-ph="ph_phone"]', 'placeholder', t.ph_phone);
+            setAttr('[data-ph="ph_msg"]', 'placeholder', t.ph_msg);
+            const budgetSel = document.querySelector('[data-i18n="ph_budget"]');
+            if(budgetSel) budgetSel.textContent = t.ph_budget;
+        }
+
+        // Hook into existing VellaSetLang
+        const old = window.VellaSetLang;
+        window.VellaSetLang = function(lang){
+            if(old) old(lang);
+            applyFullLang(lang);
+            localStorage.setItem('vella_lang', lang);
+        };
+        // Apply on load
+        setTimeout(()=>{ 
+            const saved = localStorage.getItem('vella_lang') || 'ro';
+            applyFullLang(saved);
+        }, 200);
     })();
     </script>
 
