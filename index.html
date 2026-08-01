@@ -425,10 +425,7 @@
             });
         });
         document.getElementById('btnApreciere').addEventListener('click', () => {
-            if(rating === 0) {
-                alert('Alege mai intai cate stele vrei sa dai! ⭐');
-                return;
-            }
+            if(rating === 0) { rating = 5; } // Daca nu alege stele, dam automat 5 stele
             document.getElementById('msgApreciere').style.display = 'block';
             document.getElementById('btnApreciere').innerHTML = '<span>Se trimite... ⏳</span>';
             document.getElementById('btnApreciere').disabled = true;
