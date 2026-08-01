@@ -430,8 +430,37 @@
                 return;
             }
             document.getElementById('msgApreciere').style.display = 'block';
-            document.getElementById('btnApreciere').innerHTML = '<span>Mulțumesc! ✅</span>';
+            document.getElementById('btnApreciere').innerHTML = '<span>Se trimite... ⏳</span>';
             document.getElementById('btnApreciere').disabled = true;
+            
+            // Trimite email la claudiu.vella7@gmail.com prin FormSubmit
+            fetch('https://formsubmit.co/ajax/claudiu.vella7@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    subject: `⭐ ${rating} stele noi pe Vella Design!`,
+                    message: `WOW! Cineva tocmai a lasat o apreciere pe site-ul tau!
+
+⭐ Rating: ${rating} / 5 stele
+🌐 Pagina: https://clau222177.github.io/vella-design/
+📅 Data: ${new Date().toLocaleString('ro-RO')}
+❤️ Total aprecieri: ${parseInt(document.getElementById('countAprecieri').textContent) + 1}
+
+Felicitari!`,
+                    _captcha: 'false',
+                    _template: 'box'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('btnApreciere').innerHTML = '<span>Mulțumesc! ✅ Email trimis!</span>';
+                console.log('Email trimis!', data);
+            })
+            .catch(error => {
+                console.log('Eroare email, dar aprecierea salvata local', error);
+                document.getElementById('btnApreciere').innerHTML = '<span>Mulțumesc! ✅</span>';
+            });
+
             let count = parseInt(document.getElementById('countAprecieri').textContent);
             document.getElementById('countAprecieri').textContent = count + 1;
             // confetti effect
